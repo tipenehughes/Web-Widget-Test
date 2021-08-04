@@ -1,27 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="styles.css" />
-        <title>Document</title>
-    </head>
-    <body>
-        <div class="container">
-            <button class="button" onClick="setZindex()">Click me!</button>
-        </div>
-        <div class="overlay" id="overlay">
-            <div class="box">
-                <h1>Hello, World!</h1>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+    <h1>Web Widget and Z-Index Practice</h1>
+    </header>
+    <div class="container">
+        <p>To make the Web Widget disappear behind the modal click the yellow button.</p>
+        <button aria-label="yellow button" class="button yellow" onClick="setZindexBehind()">Click me!</button>
+    </div>
+    <div class="overlay" id="overlay">
+        <div class="box">
+            <div class="modal">
+            <h2>I am a modal.</h2>
+            <button class="close-button" onClick="closeModal()">X</button>
             </div>
         </div>
-        <!-- Start of Zendesk Widget script -->
-        <script
-            id="ze-snippet"
-            src="https://static.zdassets.com/ekr/snippet.js?key={{Web Widget Key}}"
-        ></script>
-        <!-- End of Zendesk Widget script -->
-        <script src="main.js"></script>
-    </body>
+    </div>
+    <div class="container">
+        <p>To make the Web Widget appear in front of the modal click the pink button.</p>
+        <button aria-label="pink button" class="button pink" onClick="setZindexFront()">Click me!</button>
+    </div>
+
+    </div>
+    <!-- Start of Zendesk Widget script -->
+
+    <script id="ze-snippet"
+        src="https://static.zdassets.com/ekr/snippet.js?key=235e48d0-3592-466e-8b58-e13e3794df03"> </script>
+
+    <!-- End of Zendesk Widget script -->
+    <script src="main.js"></script>
+</body>
+
 </html>
